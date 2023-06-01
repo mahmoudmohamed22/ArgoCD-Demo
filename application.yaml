@@ -5,7 +5,7 @@ metadata:
    namespace: argocd
 spec:
   source:
-    repoURL: https://github.com/mahmoudmohamed22/simple-go-web-application.git
+    repoURL: https://github.com/mahmoudmohamed22/GitOps.git
     targetRevision: HEAD
     path: Deployment-App
   destination: 
