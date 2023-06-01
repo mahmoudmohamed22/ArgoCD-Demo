@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+   name: myapp-argo-application
+   namespace: argocd
+spec:
+  source:
+    repoURL: https://github.com/mahmoudmohamed22/simple-go-web-application.git
+    targetRevision: HEAD
+    path: Deployment-App
+  destination: 
+      server: https://kubernetes.default.svc
+      namespace: go-app
+    
+  project: default
+  
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune:  true
