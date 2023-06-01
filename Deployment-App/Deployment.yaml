@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-app-deployment
+  name: my-deployment
   namespace: go-app
 spec:
   replicas: 5
